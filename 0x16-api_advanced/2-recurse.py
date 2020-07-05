@@ -7,7 +7,7 @@ import sys
 
 
 def add_title(hot_list, hot_posts):
-    """ item ""
+    """ list """
     if len(hot_posts) == 0:
         return
     hot_list.append(hot_posts[0]['data']['title'])
