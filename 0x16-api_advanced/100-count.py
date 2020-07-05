@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Function
+Function that queries the Reddit API and prints
+the top ten hot posts of a subreddit
 """
 import re
 import requests
@@ -8,7 +9,7 @@ import sys
 
 
 def add_title(dictionary, hot_posts):
-    """ list """
+    """ Adds item into a list """
     if len(hot_posts) == 0:
         return
 
@@ -23,7 +24,7 @@ def add_title(dictionary, hot_posts):
 
 
 def recurse(subreddit, dictionary, after=None):
-    """ API """
+    """ Queries to Reddit API """
     u_agent = 'Mozilla/5.0'
     headers = {
         'User-Agent': u_agent
@@ -52,7 +53,7 @@ def recurse(subreddit, dictionary, after=None):
 
 
 def count_words(subreddit, word_list):
-    """ Init """
+    """ Init function """
     dictionary = {}
 
     for word in word_list:
