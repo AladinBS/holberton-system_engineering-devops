@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-"""function"""
+"""Function"""
 import requests
 import sys
 
+
+
 def add_title(hot_list, hot_posts):
-    """ Adds item into a list """
+    """list"""
     if len(hot_posts) == 0:
         return
     hot_list.append(hot_posts[0]['data']['title'])
     hot_posts.pop(0)
     add_title(hot_list, hot_posts)
 
+
+
 def recurse(subreddit, hot_list=[], after=None):
-    """API """
+    """API"""
     u_agent = 'Mozilla/5.0'
     headers = {
         'User-Agent': u_agent
