@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return inforamtion
+Module contains a function that returns informations about a requested employee
 """
 
 
